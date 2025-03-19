@@ -23,7 +23,7 @@ namespace _2___Exercício_Criando_um_sistema_de_Conta_Bancária
             }
         public void ExibirSaldo()
             {
-                Console.WriteLine("Saldo: " + Saldo);
+                Console.WriteLine("Saldo: " + Saldo + " R$");
             }
         }
     }
