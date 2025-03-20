@@ -3,34 +3,84 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Collections.Generic;
 
+Console.Write("Deseja incluir quantos produtos? ");
+int n = int.Parse(Console.ReadLine());
 
-Produto produto = new Produto();
+Produto[] vetor = new Produto[n];
 
-Console.WriteLine("Entre com os dados do produto:");
-Console.Write("Nome: ");
-produto.Nome = Console.ReadLine().ToUpper();
-Console.Write("Preço: ");
-produto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-Console.Write("Quantidade no estoque: ");
-produto.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+for (int i = 0; i < n; i++)
+{
 
-Console.Clear();
-Console.WriteLine($"Dados do produto: ");
-produto.ExibirDetalhes();
+    Console.WriteLine($"Entre com os dados do {i + 1}° produto:");
+    Console.Write("Nome: ");
+    string nome = Console.ReadLine().ToUpper();
+    Console.Write("Preço: ");
+    double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+    Produto produto = new Produto { Nome = nome, Preco = preco };
+    Console.Write("Digite a quantidades a ser adicionado ao estoque: ");
+    produto.AdicionarEstoque(int.Parse(Console.ReadLine()));
 
+    Console.WriteLine();
+    vetor[i] = produto;
 
-Console.Write("Digite o numero de produtos a ser adicionado do estoque: ");
-produto.AdicionarEstoque(int.Parse(Console.ReadLine()));
-
-Console.Clear();
-
-Console.WriteLine($"Dados atualizados: ");
-produto.ExibirDetalhes();
-
-Console.Write("Digite o numero de produtos a ser removido do estoque: ");
-produto.RemoverEstoque(int.Parse(Console.ReadLine()));
+}
 
 Console.Clear();
 
-Console.WriteLine($"Dados atualizados: ");
-produto.ExibirDetalhes();
+
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine("Dados do produto: ");
+    vetor[i].ExibirDetalhes();
+}
+
+
+bool ContinuarRemover = true;
+
+while (ContinuarRemover)
+{
+
+    Console.WriteLine("Deseja retirar algum produto do estoque? (s/n)");
+    char ReProd = char.Parse(Console.ReadLine().ToUpper());
+
+    if (ReProd == 'S')
+    {
+        Console.WriteLine("Digite o nome do produto: ");
+        string nomeProduto = Console.ReadLine().ToUpper();
+        bool ProdutoEncontrado = false;
+
+        for (int i = 0; i < n; i++)
+        {
+
+            if (vetor[i].Nome == nomeProduto)
+            {
+                Console.Write("Digite a quantidade a ser removido do estoque: ");
+                vetor[i].RemoverEstoque(int.Parse(Console.ReadLine()));
+                Console.Clear();
+
+                Console.WriteLine($"Dados atualizados: ");
+                for (int j = 0; j < n; j++)
+                {
+                    vetor[j].ExibirDetalhes();
+                }
+
+
+
+                
+            }
+
+        }
+    }
+    else
+    {
+        Console.Clear();
+        Console.WriteLine($"Dados atualizados: ");
+        for (int i = 0; i < n; i++)
+        {
+            
+            vetor[i].ExibirDetalhes();
+            ContinuarRemover = false;
+        }
+    }
+}
+

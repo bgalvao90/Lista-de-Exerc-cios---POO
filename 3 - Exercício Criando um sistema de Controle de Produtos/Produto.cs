@@ -18,7 +18,7 @@ namespace _3___Exercício_Criando_um_sistema_de_Controle_de_Produtos
 
         public void ExibirDetalhes()
         {
-            Console.WriteLine( Nome + ", $ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + Quantidade + " unidades"); 
+            Console.WriteLine(Nome + ", $ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + Quantidade + " unidades");
         }
 
 
