@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 - Exercício Aluno e Nota", "1 - Exercício Aluno e Nota\1 - Exercício Aluno e Nota.csproj", "{E3556FAF-D593-4639-A8DA-7A2A71056C29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 - Exercício Criando um sistema de Conta Bancária", "2 - Exercício Criando um sistema de Conta Bancária\2 - Exercício Criando um sistema de Conta Bancária.csproj", "{FCC57881-9B61-4870-9BFC-7FAC267D94E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Exercício Criando um sistema de Controle de Produtos", "3 - Exercício Criando um sistema de Controle de Produtos\3 - Exercício Criando um sistema de Controle de Produtos.csproj", "{A6D1B81A-EF10-4E69-A24A-C1DB8A3DAE9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FCC57881-9B61-4870-9BFC-7FAC267D94E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC57881-9B61-4870-9BFC-7FAC267D94E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC57881-9B61-4870-9BFC-7FAC267D94E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D1B81A-EF10-4E69-A24A-C1DB8A3DAE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D1B81A-EF10-4E69-A24A-C1DB8A3DAE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D1B81A-EF10-4E69-A24A-C1DB8A3DAE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D1B81A-EF10-4E69-A24A-C1DB8A3DAE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
