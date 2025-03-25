@@ -22,7 +22,7 @@ for (int i = 0; i < n; i++)
 
     Console.WriteLine();
     vetor[i] = produto;
-
+        
 }
 
 Console.Clear();

@@ -36,9 +36,16 @@ namespace _1___Exercício_Aluno_e_Nota
         }
         public void ReceberDados()
         {
+            Console.WriteLine("Digite o RA do aluno: ");
             RA = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o nome do aluno: ");
             Nome = Console.ReadLine();
+
+            Console.WriteLine("Digite a nota da prova: ");
             NotaDaProva = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a nota do trabalho: ");
             NotaDoTrabalho = double.Parse(Console.ReadLine());
         }
     }
